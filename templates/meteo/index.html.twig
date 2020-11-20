@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MeteoController!{% endblock %}
+
+{% block body %}
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <div class="row"></div>
+    <div class="col-4   col-sm-4 m-auto">
+      {{ form_start(form) }}
+
+      {{ form_widget(form) }}
+
+      {{ form_end(form) }}
+
+      {%  if meteo is defined %}
+
+        <h1>  {{ (meteo.ville)}} <img src="http://openweathermap.org/img/wn/{{ meteo.icone }}@2x.png" alt="">  </h1>
+
+        <h2 class="font-weight-normal">Temperature:  {{ (meteo.temperature)}} ° </h2>
+        <h3> Description: {{ (meteo.description )}}</h3>
+        <h3> Humidité: {{ (meteo.humidity)}} % </h3>
+        <h3> vitesse du vent: {{ (meteo.vent)}} Km/h </h3>
+
+      {% else %}
+
+        <p> cette {{ meteo.ville }} est introuvable </p>
+
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+
+{% endblock %}
