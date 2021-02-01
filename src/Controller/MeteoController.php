@@ -22,7 +22,7 @@ class MeteoController extends AbstractController
     /**
      * @Route("/", name="meteo_" ,methods={"GET","POST"})
      */
-    public function index(Request $request,EntityManagerInterface $em ): Response
+    public function index(Request $request, EntityManagerInterface $em,MeteoService $service): Response
     {
         $meteo = new Meteo();
         $form = $this->createForm(MeteoType::class, $meteo);
@@ -31,20 +31,22 @@ class MeteoController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             try {
-                $service = new MeteoService();
-                $json = $service->ApiCall($form->getData());
+                $ville= $form->getData();
+                $json = $service->ApiCall($ville);
+                  $json= json_decode($json);
 
-                    $meteo= $meteo->setVille($json->name);
-                    $meteo = $meteo->setTemperature($json->main->temp);
-                    $meteo = $meteo->setHumidity($json->main->humidity);
-                    $meteo = $meteo->setDescription($json->weather[0]->description);
-                    $meteo = $meteo->setVent($json->wind->speed);
-                    $meteo=$meteo->setIcone($json->weather[0]->icon);
+                $meteo->setVille($json->name);
+                $meteo->setTemperature($json->main->temp);
+                $meteo->setHumidity($json->main->humidity);
+                $meteo->setDescription($json->weather[0]->description);
+                $meteo->setVent($json->wind->speed);
+                $meteo->setIcone($json->weather[0]->icon);
 
-                    $em->persist($meteo);
-                    $em->flush();
-            }catch (\Exception $e){
-              echo "cette ville est introuvable" .$e->getMessage();
+                $em->persist($meteo);
+                $em->flush();
+            } catch (\Exception $e) {
+
+                echo "cette ville est introuvable" . $e->getMessage();
             }
 
         }
@@ -52,8 +54,16 @@ class MeteoController extends AbstractController
             'form' => $form->createView(),
             'meteo' => $meteo
         ]);
-    }
+   }
 
+    /**
+     * @return mixed
+     * @Route ("/erreur" ,name="error")
+     */
+  public  function  error()
+  {
+
+  }
 }
 
 

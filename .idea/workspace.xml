@@ -11,12 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bb7616d-3f60-43c2-b1e6-1502a23ff744" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/MeteoService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MeteoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MeteoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Meteo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Meteo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/MeteoService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/MeteoService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/meteo/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/meteo/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,8 +154,9 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../GlobalSession" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -204,12 +208,24 @@
       <workItem from="1605729210166" duration="11193000" />
       <workItem from="1605813923558" duration="267000" />
       <workItem from="1605900576663" duration="1633000" />
-      <workItem from="1605902283253" duration="10696000" />
+      <workItem from="1605902283253" duration="12114000" />
+      <workItem from="1605967939487" duration="871000" />
+      <workItem from="1606493680884" duration="12529000" />
+      <workItem from="1606769107976" duration="4455000" />
+      <workItem from="1606774764530" duration="2048000" />
+      <workItem from="1606854681708" duration="1023000" />
+      <workItem from="1607245725193" duration="44000" />
+      <workItem from="1607629826031" duration="9651000" />
+      <workItem from="1607674188073" duration="799000" />
+      <workItem from="1612167814087" duration="2828000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -228,10 +244,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604437190559" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1605814194647">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1606769511701">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605814194647" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606769511701" />
     <state x="414" y="87" key="NewPhpClassDialog" timestamp="1604659839264">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

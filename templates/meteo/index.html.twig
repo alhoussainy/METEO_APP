@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MeteoController!{% endblock %}
+{% block title %} MétéoController!{% endblock %}
 
 {% block body %}
   <br>
@@ -19,10 +19,10 @@
 
         <h1>  {{ (meteo.ville)}} <img src="http://openweathermap.org/img/wn/{{ meteo.icone }}@2x.png" alt="">  </h1>
 
-        <h2 class="font-weight-normal">Temperature:  {{ (meteo.temperature)}} ° </h2>
-        <h3> Description: {{ (meteo.description )}}</h3>
-        <h3> Humidité: {{ (meteo.humidity)}} % </h3>
-        <h3> vitesse du vent: {{ (meteo.vent)}} Km/h </h3>
+        <h1 >Temperature:  {{ (meteo.temperature)}} ° </h1>
+        <h5> Description: {{ (meteo.description )}}</h5>
+        <h5> Humidité: {{ (meteo.humidity)}} % </h5>
+        <h5> vitesse du vent: {{ (meteo.vent)}} Km/h </h5>
 
       {% else %}
 

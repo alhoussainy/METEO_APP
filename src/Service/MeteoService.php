@@ -4,19 +4,26 @@
 namespace App\Service;
 
 
+use Symfony\Contracts\HttpClient\HttpClientInterface;
+
 class MeteoService
 {
-    public function ApiCall($ville){
 
-
-                   $cle = "a067a8ee67eb6deb93bb335a39868ca8";
-                   $api = file_get_contents("https://api.openweathermap.org/data/2.5/weather?q=$ville&units=metric&lang=fr&appid=$cle");
-                   return  $json = json_decode($api);
-
-//        }catch (\Exception $e){
-//
-//          echo "cette ville est introuvable ".$e->getMessage();
-//        }
+    private string $key;
+    private HttpClientInterface  $client;
+    private string $url;
+    public function __construct( string $key ,HttpClientInterface $httpClient,string $url)
+    {     $this->url=$url;
+         $this->key=$key;
+         $this->client=$httpClient;
     }
+    public function ApiCall($ville)
+    {
 
+
+        $reponse = $this->client->request("GET", "{$this->url}={$ville}&units=etric&lang=fr&appid={$this->key}");
+        return  $reponse->getContent();
+
+
+    }
 }
